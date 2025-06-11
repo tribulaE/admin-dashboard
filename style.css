@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: pink;
 }
 
 body {
@@ -10,3 +9,17 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr; 
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: blue;
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
