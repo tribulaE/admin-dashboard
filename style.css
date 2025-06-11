@@ -23,3 +23,51 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.greeting p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.greeting h2 {
+  font-size: 1.25rem;
+  margin-top: 4px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.search {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+  color: white;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: blue;
+}
