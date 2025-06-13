@@ -1,12 +1,10 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
-  font-family: sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: grey
 }
 
 .container {
@@ -18,20 +16,49 @@ body {
 .sidebar {
   background-color: blue;
   color: white;
-  padding: 24px;
+  padding: 32px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 45px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.nav-links.secondary{
+  margin-top: 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  opacity: 0.85;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 25px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 24px;
+  box-shadow: 0 2px 8px blue;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -39,23 +66,26 @@ body {
 .greeting p {
   font-size: 0.9rem;
   color: #666;
+  margin: 0;
 }
 
 .greeting h2 {
   font-size: 1.25rem;
-  margin-top: 4px;
+  color: #111;
+  margin-top: 4px 0 0;
 }
 
 .right {
   display: flex;
   align-items: center;
   gap: 16px;
-  flex-wrap: wrap;
+  flex: 1;
 }
 
 .search {
+  flex: 1;
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
@@ -63,7 +93,7 @@ body {
   padding: 8px 14px;
   border: none;
   border-radius: 5px;
-  background-color: pink;
+  background-color: black;
   color: white;
   cursor: pointer;
 }
@@ -73,23 +103,38 @@ body {
 }
 
 .projects {
-  margin-bottom: 40px;
+display: grid;
 }
+
+.projects h3 {
+font-size: 25px;
+}
+
+
+/* Project cards layout */
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(2, 400px);
   gap: 20px;
 }
+.main-content {
+  padding: 20px;
+  padding: 20px 25px;
+}
+
+
+/* Each project card */
 
 .card {
   background-color: white;
-  padding: 16px;
+  padding: 10px;
+  padding-bottom: 0px;
   border-radius: 8px;
-  box-shadow: 0 2pz 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid blue;
+  display: grid;
 }
 
 .card h4 {
@@ -97,7 +142,7 @@ body {
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 1.20rem;
   color: #444;
   flex-grow: 1;
 }
@@ -108,3 +153,100 @@ body {
   gap: 10px;
   margin-top: 12px;
 }
+
+.right-side-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+  align-self: start;
+}
+
+@media (min-width: 900px) {
+  .right-side-widgets {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*annoncemnts and trending bottom right */
+
+.trending {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 16px;
+  max-width: 350px;
+}
+.announcements {
+  background-color: white;
+  padding: 15px ;
+  padding-top: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.announcement-card .announcement {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.announcement-card .announcement:last-child {
+  border-bottom: none;
+}
+
+.a {
+font-size: 25px;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.b {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.announcement p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.trending-card .trend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.trending-card .trend:last-child {
+  margin-bottom: 0;
+}
+
+.trending-card img.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.handle {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+

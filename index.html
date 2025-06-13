@@ -9,9 +9,10 @@
 <body>
     <div class="container">
 
+      <!--Sidebar with links-->
         <aside class="sidebar">
-            <div class="dashboard">Dashboard
-                <ul>
+            <div class="dashboard-title"><span>🪟 </span>Dashboard
+                <ul class="nav-links">
                     <li><span>🏠</span> Home </li>
                     <li> <span>🪪</span> Profile </li>
                     <li> <span>✉️</span> Messages </li>
@@ -31,9 +32,12 @@
             <div class="header">
                 <div class="greeting">
                     <p>Hi there,</p>
-                    <h2>Nate Evans (@nate) </h2>
+                    <h2>Nate Evans </h2>
                 </div>
 
+
+
+<!--Buttons in the header-->
             <div class="right">
                 <input type="text" class="search" placeholder="Search...">
                 <div class="buttons">
@@ -43,13 +47,17 @@
                 </div>
             </div>
         </div>
+
+
+        <!--Dashboard underneath the header -->
+        <div class="dashboard-content">
             <div class="projects">
                 <h3>Your Projects</h3>
                 <div class="project-grid">
 
                     <div class="card">
                         <h4> Amazing Project</h4>
-                        <p>...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac fringilla massa, at aliquam erat. Sed viverra massa eu quam faucibus efficitur. Praesent sit amet mi ullamcorper, rhoncus justo eu, tincidunt ipsum. Integer sit amet facilisis nulla. Praesent at dui sed urna tempus aliquam eget nec felis. </p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -59,7 +67,7 @@
 
                     <div class="card">
                         <h4> Funny App</h4>
-                        <p>...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor et justo sit amet cursus. Fusce rutrum, lorem vel fermentum finibus, massa metus finibus nulla, at pellentesque neque lectus sed mauris. </p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -69,7 +77,7 @@
 
                     <div class="card">
                         <h4> Tiktok Idea</h4>
-                        <p>...</p>
+                        <p>Nulla tincidunt lacus eu nulla efficitur pharetra. Ut quis odio mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -79,7 +87,7 @@
 
                     <div class="card">
                         <h4> Supercars</h4>
-                        <p>...</p>
+                        <p>Aliquam quis vestibulum ex, quis rhoncus enim. In scelerisque bibendum lectus id ultrices. Praesent sit amet velit bibendum, ultrices dui vitae, placerat lectus.</p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -89,7 +97,7 @@
 
                     <div class="card">
                         <h4> Privacy Protect</h4>
-                        <p>...</p>
+                        <p>Maecenas luctus lobortis libero, non sagittis sem fermentum vel. Morbi congue nisl tempus, elementum arcu ullamcorper, fermentum urna. Duis porta leo vitae odio facilisis</p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -99,7 +107,7 @@
 
                     <div class="card">
                         <h4> Fun On The Job</h4>
-                        <p>...</p>
+                        <p>In eu maximus erat. Quisque pellentesque et ipsum vel vulputate. Duis pharetra elit quis enim faucibus finibus. Aliquam finibus mauris non est congue vulputate.</p>
                         <div class="card-actions">
                             <span>★</span>
                             <span>👁️</span>
@@ -108,66 +116,74 @@
                     </div>
                 </div>
             </div>
-            
-        <div class="right-side-widgets">
-            <div class="announcements">
-            <h3>Announcements</h3>
-            <div class="announcement-card">
-            <div class="announcement">
-                <h4>Site Maintenance</h4>
-                <p>We'll be down for maintenance on Saturday from 2am-4am EST.</p>
-            </div>
-            <div class="announcement">
-                <h4>New Features</h4>
-                <p>Check out the new dashboard layout and tagging system!</p>
-            </div>
-            <div class="announcement">
-                <h4>Community Share</h4>
-                <p>Share your project tips and tricks with the community forum.</p>
-            </div>
-            </div>
+
+<div class="right-side-widgets">
+
+  <!-- Announcements -->
+   <h3 class='a'>Announcements</h3>
+  <div class="announcements">
+    
+    <div class="announcement-card">
+      <div class="announcement">
+        
+        <h4>Site Maintenance</h4>
+        <p>We'll be down for maintenance on Saturday from 2am-4am EST.</p>
+      </div>
+      <div class="announcement">
+        <h4>New Features</h4>
+        <p>Check out the new dashboard layout and tagging system!</p>
+      </div>
+      <div class="announcement">
+        <h4>Community Share</h4>
+        <p>Share your project tips and tricks with the community forum.</p>
+      </div>
+    </div>
+  </div> 
+
+  <!-- Trending --><h3 class="b">Trending</h3>
+  <div class="trending">
+    
+    <div class="trending-card">
+
+      <div class="trend">
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Tegan" class="avatar" alt="Tegan">
+          <div>
+        <p class="handle">@tegan</p>
+          <p>World Peace Builder</p>
         </div>
+      </div>
 
-        <div class="trending">
-            <h3>Trending</h3>
-            <div class="trending-card">
-
-            <div class="trend">
-                <img src="https://via.placeholder.com/40" class="avatar" alt="Tegan">
-                <div>
-                <p class="handle">@tegan</p>
-                <p>World Peace Builder</p>
-                </div>
-            </div>
-
-            <div class="trend">
-                <img src="https://via.placeholder.com/40" class="avatar" alt="Morgan">
-                <div>
-                <p class="handle">@morgan</p>
-                <p>Super Cool Project</p>
-                </div>
-            </div>
-
-            <div class="trend">
-                <img src="https://via.placeholder.com/40" class="avatar" alt="Kendall">
-                <div>
-                <p class="handle">@kendall</p>
-                <p>Life Changing App</p>
-                </div>
-            </div>
-
-            <div class="trend">
-                <img src="https://via.placeholder.com/40" class="avatar" alt="Alex">
-                <div>
-                <p class="handle">@alex</p>
-                <p>No Traffic Maker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="trend">
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Morgan" class="avatar" alt="Morgan">
+        <div>
+          <p class="handle">@morgan</p>
+          <p>Super Cool Project</p>
         </div>
+      </div>
 
-        </main>
+      <div class="trend">
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Kendall" class="avatar" alt="Kendall">
+        <div>
+          <p class="handle">@kendall</p>
+          <p>Life Changing App</p>
+        </div>
+      </div>
+
+      <div class="trend">
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Alex" class="avatar" alt="Alex">
+        <div>
+          <p class="handle">@alex</p>
+          <p>No Traffic Maker</p>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+
+</div> 
+
+   </div>     
+</main>
     </div>
 </body>
 </html>
